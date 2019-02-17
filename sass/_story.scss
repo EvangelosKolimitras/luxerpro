@@ -1,0 +1,63 @@
+.story {
+    &__img {
+        background-color: $color-primary;
+        grid-column: full-start / col-end 4;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        align-items: center;
+        background-image: linear-gradient( rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);
+        @media only screen and (max-width: $lg) {
+            margin-top: 20rem;
+        }
+    }
+    &__img {
+        &--1 {
+            width: 100%;
+            grid-row: 2 / 6;
+            grid-column: 2 / 6;
+            box-shadow: 0 2rem 5rem rgba($color-secondary, .7);
+        }
+        &--2 {
+            width: 125%;
+            z-index: 10;
+            grid-row: 4 / 6;
+            grid-column: 4 / 7;
+            box-shadow: 0 2rem 5rem rgba($color-secondary, .7);
+
+            @media only screen and (max-width: $lg) {
+                width: 115%;
+            }
+        }
+    }
+    &__content {
+        background-color: $color-grey-light-1;
+        padding: 6rem 7vw;
+        grid-column: col-end 4 / -1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__text {
+        font-size: 1.5rem;
+        font-family: italic;
+        margin-bottom: 4rem;
+    }
+}
+
+.mb-sm {
+    margin-bottom: 2rem;
+}
+
+.mb-md {
+    margin-bottom: 4rem;
+}
+
+.mb-lg {
+    margin-bottom: 6rem;
+}
+
+.mb-xl {
+    margin-bottom: 8rem;
+}

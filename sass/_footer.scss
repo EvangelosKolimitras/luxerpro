@@ -1,0 +1,42 @@
+.footer {
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;
+
+    padding: 8rem;
+
+    &__text {
+        font-size: 1.4rem;
+        color: $color-grey-light-2;
+        text-align: center;
+        margin-top: 5rem;
+        widows: 75%;
+    }
+}
+
+.nav {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+    grid-gap: 2rem;
+
+    &__item {
+        padding: 1.5rem;
+        justify-self: center;
+        align-self: center;
+        font-size: 1.5rem;
+        text-align: center;
+        transition: all .4s;
+        font-weight: 400;
+
+        &:hover {
+            transform: translateY(-.5rem) scale(1.05);
+            background-color: rgba($color: #fff, $alpha: .85);
+            cursor: pointer;
+            
+            & > a {
+                color: $color-secondary;
+            }
+        }
+    }
+}
